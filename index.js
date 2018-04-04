@@ -123,24 +123,26 @@ textInput.oninput = function(){
     //1
     listElement1.innerText = checkForMistakes(textInput.value)?'':'Format mistake!';
     //2
-    listElement2.innerText = 'Go watch console';
-    consoleLogObject(textInput.value);
-    //3
-    listElement3.innerHTML=`<pre>${toPrettyHtml(textInput.value)}</pre>`;
-    //4
-    listElement4.innerText = objectKeysToString(textInput.value);
-    //5
-    listElement5.innerText = isEmpty(textInput.value);
-    //6
-    listElement6.innerText = keysIfValueIs(textInput.value);
-    //7
-    listElement7.innerText = 'Go watch console';
-    console.log(doubledValuesObject(textInput.value));
-    //8
-    listElement8.innerText = 'Go watch console';
-    console.log(sortedObj(textInput.value));
-    //9
-    listElement9.innerText = randomValue(textInput.value);
-    //10
-    listElement10.innerText = dateNow();
+    if(checkForMistakes(textInput.value)){
+        listElement2.innerText = 'Go watch console';
+        consoleLogObject(textInput.value);
+        //3
+        listElement3.innerHTML=`<pre>${toPrettyHtml(textInput.value)}</pre>`;
+        //4
+        listElement4.innerText = objectKeysToString(textInput.value);
+        //5
+        listElement5.innerText = isEmpty(textInput.value);
+        //6
+        listElement6.innerText = keysIfValueIs(textInput.value);
+        //7
+        listElement7.innerText = 'Go watch console';
+        console.log(doubledValuesObject(textInput.value));
+        //8
+        listElement8.innerText = 'Go watch console';
+        console.log(sortedObj(textInput.value));
+        //9
+        listElement9.innerText = randomValue(textInput.value);
+        //10
+        listElement10.innerText = dateNow();
+    }
 }
